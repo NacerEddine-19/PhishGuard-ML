@@ -5,7 +5,7 @@ from pydantic import BaseModel  # type: ignore
 import joblib  # type: ignore
 # import onnxruntime as rt  # Commented out to reduce size
 import numpy as np
-
+from fastapi import Request
 from pathlib import Path
 from urllib.parse import urlparse
 from collections import Counter
@@ -27,12 +27,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-@app.get("/health")
-async def health_check():
-    """Health check endpoint for Railway deployment"""
-    return {"status": "healthy", "service": "PhishGuard ML API"}
-
-
 # Allow requests from your frontend
 app.add_middleware(
     CORSMiddleware,
@@ -43,6 +37,17 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.options("/{rest_of_path:path}")
+async def preflight_handler(request: Request):
+    return {}
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Railway deployment"""
+    return {"status": "healthy", "service": "PhishGuard ML API"}
+
+
 
 # Load model and label encoder (robust paths + fallback)
 BASE_DIR = Path(__file__).resolve().parent

@@ -554,7 +554,7 @@ export default function DemoSection() {
                 {/* Probability Breakdown */}
                 {analysisResult.probabilities &&
                   Object.keys(analysisResult.probabilities).length > 0 && (
-                    <div className="bg-slate-700/30 rounded-xl p-6 border border-slate-600">
+                    <div className="bg-slate-700/30 rounded-xl p-4 sm:p-6 border border-slate-600">
                       <h4 className="font-semibold text-white mb-4">
                         Model Confidence Breakdown
                       </h4>
@@ -573,16 +573,15 @@ export default function DemoSection() {
                             return (
                               <div
                                 key={className}
-                                className="flex items-center justify-between"
+                                className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0"
                               >
-                                <div className="flex items-center space-x-3">
-                                  <span className={`text-gray-300 px-3 rounded-md capitalize ${isPredicted ? `bg-${className === "bad" ? "red" : "green"}-500/20` : ""}`}>
+                                <div className="flex items-center space-x-2 sm:space-x-3">
+                                  <span className={`text-gray-300 px-2 sm:px-3 py-1 rounded-md capitalize text-sm sm:text-base ${isPredicted ? `bg-${className === "bad" ? "red" : "green"}-500/20` : ""}`}>
                                     {className}
                                   </span>
-
                                 </div>
-                                <div className="flex items-center space-x-3">
-                                  <div className="w-32 bg-slate-600 rounded-full h-2">
+                                <div className="flex items-center space-x-2 sm:space-x-3">
+                                  <div className="flex-1 sm:w-32 bg-slate-600 rounded-full h-2 min-w-0">
                                     <div
                                       className={`h-2 rounded-full transition-all duration-500 ${isPredicted
                                         ? "bg-blue-400"
@@ -591,7 +590,7 @@ export default function DemoSection() {
                                       style={{ width: `${percentage}%` }}
                                     />
                                   </div>
-                                  <span className="text-sm text-gray-300 w-12 text-right">
+                                  <span className="text-sm text-gray-300 w-12 sm:w-12 text-right flex-shrink-0">
                                     {percentage}%
                                   </span>
                                 </div>

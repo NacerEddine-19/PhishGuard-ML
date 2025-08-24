@@ -7,6 +7,7 @@ export default function DemoSection() {
   const [demoUrl, setDemoUrl] = useState('')
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [analysisResult, setAnalysisResult] = useState(null)
+  const [error, setError] = useState(null)
 
   const generate_analysis_details = (features) => {
     const details = []
@@ -68,7 +69,6 @@ export default function DemoSection() {
   const handleCheck = async (url) => {
     try {
       const result = await predictURL(url)
-      console.log('Prediction:', result)
       return result
     } catch (err) {
       console.error('Prediction error:', err)
@@ -82,11 +82,10 @@ export default function DemoSection() {
 
     setIsAnalyzing(true)
     setAnalysisResult(null)
+    setError(null)
 
     try {
       const result = await handleCheck(demoUrl)
-      console.log("result:", result)
-      console.log("probability:", result.probability)
 
       // Process the real prediction result from API
       const isPhishing = result.prediction === "bad"
@@ -201,31 +200,8 @@ export default function DemoSection() {
       console.log("Analysis result:", analysisResult)
     } catch (err) {
       console.error("Check failed:", err)
-      // Show error message to user
-      setAnalysisResult({
-        isPhishing: false,
-        confidence: 0,
-        reasons: [
-          "Error: Unable to analyze URL. Please try again.",
-          "Check your internet connection and try again.",
-        ],
-        features: {
-          urlLength: demoUrl.length,
-          hasHttps: demoUrl.startsWith("https"),
-          subdomains: 0,
-          numDigits: 0,
-          numSpecial: 0,
-          numDots: 0,
-          hasAt: 0,
-          hasIP: 0,
-          urlDepth: 0,
-          hasKeywords: 0,
-          hasSuspiciousTLD: 0,
-          isTopDomain: 0,
-          hostnameLength: 0,
-        },
-        probabilities: {},
-      })
+      setError(err.message || "Failed to analyze URL. Please try again.")
+      setAnalysisResult(null)
     } finally {
       setIsAnalyzing(false)
     }
@@ -300,7 +276,7 @@ export default function DemoSection() {
               <div className="flex items-start space-x-3">
                 <Info className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-blue-200">
-                <strong>Tip</strong>: Include the protocol (http/https). If omitted, the app assumes https by default.
+                  <strong>Tip</strong>: Include the protocol (http/https). If omitted, the app assumes https by default.
                 </div>
               </div>
             </div>
@@ -327,14 +303,45 @@ export default function DemoSection() {
               </div>
             </div>
 
+            {/* Error Display */}
+            {error && (
+              <div className="mt-8 p-6 bg-red-500/10 border border-red-500/30 rounded-xl animate-fade-in">
+                <div className="flex items-start space-x-3">
+                  <XCircle className="h-6 w-6 text-red-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-red-400 mb-2">
+                      Analysis Failed
+                    </h3>
+                    <p className="text-red-200 mb-3">
+                      {error}
+                    </p>
+                    <div className="text-sm text-red-300 space-y-1 mb-4">
+                      <p>• Check your internet connection</p>
+                      <p>• Verify the URL format is correct</p>
+                      <p>• Try again in a few moments</p>
+                    </div>
+                    <Button
+                      onClick={() => {
+                        setError(null)
+                        runAnalysis()
+                      }}
+                      className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded-lg transition-colors"
+                    >
+                      Try Again
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Analysis Results */}
             {analysisResult && (
               <div className="mt-8 space-y-6 animate-fade-in">
                 {/* Main Result */}
                 <div
                   className={`p-6 rounded-xl border-2 ${analysisResult.isPhishing
-                      ? "bg-red-500/10 border-red-500/30"
-                      : "bg-green-500/10 border-green-500/30"
+                    ? "bg-red-500/10 border-red-500/30"
+                    : "bg-green-500/10 border-green-500/30"
                     }`}
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -346,8 +353,8 @@ export default function DemoSection() {
                     <div>
                       <h3
                         className={`text-2xl font-bold ${analysisResult.isPhishing
-                            ? "text-red-400"
-                            : "text-green-400"
+                          ? "text-red-400"
+                          : "text-green-400"
                           }`}
                       >
                         {analysisResult.isPhishing
@@ -400,8 +407,8 @@ export default function DemoSection() {
                       <div className="text-center">
                         <div
                           className={`text-xl font-bold ${analysisResult.features.hasHttps
-                              ? "text-green-400"
-                              : "text-red-400"
+                            ? "text-green-400"
+                            : "text-red-400"
                             }`}
                         >
                           {analysisResult.features.hasHttps ? "Yes" : "No"}
@@ -469,8 +476,8 @@ export default function DemoSection() {
                       <div className="text-center">
                         <div
                           className={`text-xl font-bold ${analysisResult.features.hasAt
-                              ? "text-red-400"
-                              : "text-green-400"
+                            ? "text-red-400"
+                            : "text-green-400"
                             }`}
                         >
                           {analysisResult.features.hasAt ? "Yes" : "No"}
@@ -480,8 +487,8 @@ export default function DemoSection() {
                       <div className="text-center">
                         <div
                           className={`text-xl font-bold ${analysisResult.features.hasIP
-                              ? "text-red-400"
-                              : "text-green-400"
+                            ? "text-red-400"
+                            : "text-green-400"
                             }`}
                         >
                           {analysisResult.features.hasIP ? "Yes" : "No"}
@@ -491,11 +498,10 @@ export default function DemoSection() {
                       <div className="text-center">
                         <div
                           className={`text-xl font-bold ${analysisResult.features.hasKeywords
-                              ? "text-red-400"
-                              : "text-green-400"
+                            ? "text-red-400"
+                            : "text-green-400"
                             }`}
                         >
-                          {console.log(analysisResult.features.hasKeywords)}
                           {analysisResult.features.hasKeywords ? "Yes" : "No"}
                         </div>
                         <div className="text-xs text-gray-400">
@@ -505,8 +511,8 @@ export default function DemoSection() {
                       <div className="text-center">
                         <div
                           className={`text-xl font-bold ${analysisResult.features.hasSuspiciousTLD
-                              ? "text-red-400"
-                              : "text-green-400"
+                            ? "text-red-400"
+                            : "text-green-400"
                             }`}
                         >
                           {analysisResult.features.hasSuspiciousTLD
@@ -528,8 +534,8 @@ export default function DemoSection() {
                     <div className="text-center">
                       <div
                         className={`text-xl font-bold ${analysisResult.features.isTopDomain
-                            ? "text-green-400"
-                            : "text-yellow-400"
+                          ? "text-green-400"
+                          : "text-yellow-400"
                           }`}
                       >
                         {analysisResult.features.isTopDomain
@@ -570,21 +576,17 @@ export default function DemoSection() {
                                 className="flex items-center justify-between"
                               >
                                 <div className="flex items-center space-x-3">
-                                  <span className="text-gray-300 capitalize">
+                                  <span className={`text-gray-300 px-3 rounded-md capitalize ${isPredicted ? `bg-${className === "bad" ? "red" : "green"}-500/20` : ""}`}>
                                     {className}
                                   </span>
-                                  {isPredicted && (
-                                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded sm:flex-row">
-                                      Predicted
-                                    </span>
-                                  )}
+
                                 </div>
                                 <div className="flex items-center space-x-3">
                                   <div className="w-32 bg-slate-600 rounded-full h-2">
                                     <div
                                       className={`h-2 rounded-full transition-all duration-500 ${isPredicted
-                                          ? "bg-blue-400"
-                                          : "bg-gray-500"
+                                        ? "bg-blue-400"
+                                        : "bg-gray-500"
                                         }`}
                                       style={{ width: `${percentage}%` }}
                                     />

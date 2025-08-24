@@ -5,7 +5,7 @@ export interface PredictionResponse {
 }
 
 
-export async function predictURL(url: string): Promise<PredictionResponse> {
+export async function predictURL(url: string){
     console.log("Predicting URL:", url);
     const trimmed = url.trim();
     const normalized = /^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//.test(trimmed) ? trimmed : `https://${trimmed}`;

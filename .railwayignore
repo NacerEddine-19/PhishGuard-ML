@@ -18,3 +18,5 @@ Thumbs.db
 *.ipynb
 src/notebooks/
 api/
+.ipynb_checkpoints/
+*.ipynb

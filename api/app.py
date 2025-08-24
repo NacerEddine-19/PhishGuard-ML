@@ -38,6 +38,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "phishing-backend-production-002e.up.railway.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],

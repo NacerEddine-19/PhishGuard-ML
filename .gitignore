@@ -18,6 +18,7 @@ node_modules/
 # Temporary folders
 tmp/
 temp/
+api/models/model_XGBClassifier.onnx
 
 # Editor directories and files
 .vscode/

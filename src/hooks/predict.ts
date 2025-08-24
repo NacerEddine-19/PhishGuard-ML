@@ -8,7 +8,7 @@ export async function predictURL(url: string): Promise<PredictionResponse> {
     console.log("Predicting URL:", url);
     const trimmed = url.trim();
     const normalized = /^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//.test(trimmed) ? trimmed : `https://${trimmed}`;
-    const response = await fetch("http://127.0.0.1:8000/predict", {
+    const response = await fetch("https://phishing-backend-production-002e.up.railway.app/predict", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",

@@ -1,11 +1,9 @@
 # app.py
-
 from fastapi import FastAPI, HTTPException  # type: ignore
 from pydantic import BaseModel  # type: ignore
 import joblib  # type: ignore
 # import onnxruntime as rt  # Commented out to reduce size
 import numpy as np
-from fastapi import Request
 from pathlib import Path
 from urllib.parse import urlparse
 from collections import Counter
@@ -14,10 +12,6 @@ import re
 import math
 from fastapi.middleware.cors import CORSMiddleware  # type: ignore
 from functools import lru_cache
-
-
-
-
 from mangum import Mangum
 
 # Configure FastAPI for Vercel deployment
@@ -31,23 +25,13 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "*"
+        "https://phishguard-ml-production.up.railway.app",
+        "http://localhost:5173"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-@app.options("/{rest_of_path:path}")
-async def preflight_handler(request: Request):
-    return {}
-
-@app.get("/health")
-async def health_check():
-    """Health check endpoint for Railway deployment"""
-    return {"status": "healthy", "service": "PhishGuard ML API"}
-
-
 
 # Load model and label encoder (robust paths + fallback)
 BASE_DIR = Path(__file__).resolve().parent
@@ -332,7 +316,6 @@ def _predict_cached(normalized_url: str):
         "probability": final_probability,
         "probabilities": probability_dict,
     }
-
 
 @app.get("/test")
 def test():

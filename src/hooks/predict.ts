@@ -4,6 +4,7 @@ export interface PredictionResponse {
     probabilities: Record<string, number>;
 }
 
+
 export async function predictURL(url: string): Promise<PredictionResponse> {
     console.log("Predicting URL:", url);
     const trimmed = url.trim();

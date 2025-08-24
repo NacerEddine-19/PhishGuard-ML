@@ -37,7 +37,6 @@ async def health_check():
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://phish-guard-ml-website.vercel.app",
         "http://localhost:5173",
     ],
     allow_credentials=True,
@@ -47,11 +46,12 @@ app.add_middleware(
 
 # Load model and label encoder (robust paths + fallback)
 BASE_DIR = Path(__file__).resolve().parent
-MODELS_DIR = BASE_DIR / "models"
-print(BASE_DIR)
-PRIMARY_MODEL_PATH = MODELS_DIR / "model_XGBClassifier.pkl"
-PRIMARY_ENCODER_PATH = MODELS_DIR / "label_encoder_XGBClassifier.pkl"
-
+# MODELS_DIR = BASE_DIR / "models"
+# print(BASE_DIR)
+PRIMARY_MODEL_PATH ="models/model_XGBClassifier.pkl"
+PRIMARY_ENCODER_PATH ="models/label_encoder_XGBClassifier.pkl"
+print(PRIMARY_MODEL_PATH)
+print(PRIMARY_ENCODER_PATH)
 
 # Load all domains from file
 TOP_DOMAINS_PATH = BASE_DIR / "top_domains.txt"

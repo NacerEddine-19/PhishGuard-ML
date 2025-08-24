@@ -1,0 +1,66 @@
+<svg width="1300" height="1300" viewBox="0 0 1300 1300" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L12,6 L0,12 z" fill="#1F2937" />
+  </marker>
+  <marker id="arrow-muted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L12,6 L0,12 z" fill="#6B7280" />
+  </marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.15"/>
+  </filter>
+</defs>
+
+<rect x="0" y="0" width="1400" height="1800" fill="#FFFBEA"/>
+<path d="M 700,150.0 L 700,190.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 700,250.0 L 700,290.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 700,350.0 L 700,390.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 700,450.0 L 700,490.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 700,550.0 Q 440.0,570.0 420,590.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 700,550.0 Q 960.0,570.0 980,590.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 980,650.0 L 980,690.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 980,750.0 Q 800.0,970.0 700,1190.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 420,650.0 L 420,660.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 310.0,720 Q 225.0,765.0 260,810.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 530.0,720 Q 615.0,765.0 580,810.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 260,870.0 L 260,910.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 260,970.0 Q 600.0,1080.0 700,1190.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 580,870.0 L 580,910.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 580,970.0 Q 660.0,1080.0 700,1190.0" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M 820.0,220 C 1250,220 1250,980 1120,1070.0" fill="none" stroke="#6B7280" stroke-width="2.5" stroke-dasharray="8,8" marker-end="url(#arrow-muted)"/>
+<path d="M 1120,1130.0 Q 910.0,1175.0 820.0,1220" fill="none" stroke="#1F2937" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="300" y="700" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" fill="#374151">Safe</text>
+<text x="540" y="700" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" fill="#374151">Phishing</text>
+<rect x="580.0" y="90.0" width="240" height="60" rx="16" fill="#B7F7C5" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="700" y="120.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">Start</text>
+<rect x="580.0" y="190.0" width="240" height="60" rx="16" fill="#CFE8FF" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="700" y="220.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">Input URL</text>
+<rect x="580.0" y="290.0" width="240" height="60" rx="16" fill="#CFE8FF" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="700" y="320.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">Fetch URL Content</text>
+<rect x="580.0" y="390.0" width="240" height="60" rx="16" fill="#CFE8FF" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="700" y="420.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">Extract Features</text>
+<rect x="580.0" y="490.0" width="240" height="60" rx="16" fill="#CFE8FF" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="700" y="520.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">Preprocess Data</text>
+<rect x="300.0" y="590.0" width="240" height="60" rx="16" fill="#DDD6FE" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="420" y="620.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">Run AI Model</text>
+<polygon points="420,660.0 530.0,720 420,780.0 310.0,720" fill="#FDE68A" stroke="#1F2937" stroke-width="2"/>
+<text x="420" y="720.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#111827">Classification</text>
+<rect x="140.0" y="810.0" width="240" height="60" rx="16" fill="#E3F2FD" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="260" y="840.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#111827">Log Result as Safe</text>
+<rect x="100.0" y="910.0" width="320" height="60" rx="16" fill="#D1FAE5" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="260" y="940.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#111827">Notify User: URL is Safe</text>
+<rect x="460.0" y="810.0" width="240" height="60" rx="16" fill="#E3F2FD" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="580" y="840.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#111827">Log Result as Phishing</text>
+<rect x="420.0" y="910.0" width="320" height="60" rx="16" fill="#D1FAE5" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="580" y="940.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#111827">Notify User: URL is Phishing</text>
+<rect x="860.0" y="590.0" width="240" height="60" rx="16" fill="#FFE8B6" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="980" y="620.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">Generate Report</text>
+<rect x="830.0" y="690.0" width="300" height="60" rx="16" fill="#FFE8B6" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="980" y="720.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#111827">Save Report for Analysis</text>
+<rect x="970.0" y="1070.0" width="300" height="60" rx="16" fill="#FECACA" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="1120" y="1100.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#111827">Handle Invalid URL</text>
+<rect x="580.0" y="1190.0" width="240" height="60" rx="16" fill="#B7F7C5" stroke="#1F2937" stroke-width="2" class=""/>
+<text x="700" y="1220.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#111827">End</text>
+<text x="700.0" y="60.0" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="800" fill="#111827">Phishing URL Detection Pipeline</text>
+</svg>

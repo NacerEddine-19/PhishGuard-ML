@@ -27,6 +27,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for Railway deployment"""
+    return {"status": "healthy", "service": "PhishGuard ML API"}
+
 
 # Allow requests from your frontend
 app.add_middleware(

@@ -3,7 +3,7 @@ builder = "nixpacks"
 buildCommand = "npm install --legacy-peer-deps && npm run build"
 
 [deploy]
-startCommand = "npm run preview"
+startCommand = "npm run preview:railway"
 healthcheckPath = "/"
 healthcheckTimeout = 300
 

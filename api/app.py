@@ -26,7 +26,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://phishguard-ml-production.up.railway.app",
-        "http://localhost:5173"
+        "https://phishing-backend-production-002e.up.railway.app",
+        "http://localhost:5173",
+        "http://localhost:3000"
     ],
     allow_credentials=True,
     allow_methods=["*"],

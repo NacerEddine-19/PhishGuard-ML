@@ -45,7 +45,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-8 border-t border-slate-700 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 PhishGuard ML. Built with React and machine learning for educational purposes.
+            © 2025 PhishGuard ML. Built with React and machine learning for educational purposes.
           </p>
         </div>
       </div>

@@ -28,7 +28,7 @@ app.add_middleware(
         "https://phishguard-ml-production.up.railway.app",
         "https://phishing-backend-production-002e.up.railway.app",
         "http://localhost:5173",
-        "http://localhost:3000"
+        "https://phi-sh-guard.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],

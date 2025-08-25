@@ -286,18 +286,22 @@ export default function DemoSection() {
               <p className="text-sm text-gray-400">Try these sample URLs:</p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "https://google.com",
-                  "https://paypal-secure-verify.com",
-                  "https://bank-update-account.net",
-                  "https://bit.ly/suspicious-link",
-                ].map((sampleUrl) => (
+                  { url: "https://google.com", isGood: true },
+                  { url: "https://paypal-secure-verify.com", isGood: false },
+                  { url: "https://bank-update-account.net", isGood: false },
+                  { url: "https://bit.ly/suspicious-link", isGood: false },
+                ].map(({ url, isGood }) => (
                   <button
-                    key={sampleUrl}
-                    onClick={() => setDemoUrl(sampleUrl)}
-                    className="px-3 py-1 text-xs bg-slate-700 hover:bg-slate-600 text-gray-300 rounded-md transition-colors"
+                    key={url}
+                    onClick={() => setDemoUrl(url)}
+                    className={`px-3 py-1 text-xs rounded-md transition-colors ${
+                      isGood
+                        ? "bg-green-500/10 border-green-500/30 hover:bg-green-700 text-white"
+                        : "bg-red-500/10 border-red-500/30 hover:bg-red-700 text-white"
+                    }`}
                     disabled={isAnalyzing}
                   >
-                    {sampleUrl}
+                    {url}
                   </button>
                 ))}
               </div>

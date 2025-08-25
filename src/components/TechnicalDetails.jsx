@@ -282,7 +282,7 @@ export default function TechnicalDetails() {
                         {
                           title: 'Jupyter Notebook',
                           description: 'Complete data analysis and model training pipeline',
-                          link: '/src/notebooks/Phishing Sites Detector.ipynb',
+                          link: 'https://github.com/NacerEddine-19/PhishGuard-ML/blob/main/src/notebooks/Phishing%20Sites%20Detector.ipynb',
                           icon: BookOpen,
                           color: 'blue'
                         },
@@ -296,14 +296,14 @@ export default function TechnicalDetails() {
                         {
                           title: 'Dataset Download',
                           description: 'Preprocessed dataset ready for experimentation',
-                          link: '/src/data/phishing_site_urls.csv',
+                          link: 'https://raw.githubusercontent.com/NacerEddine-19/PhishGuard-ML/main/src/data/phishing_site_urls.csv',
                           icon: Database,
                           color: 'purple'
                         },
                         {
                           title: 'API Documentation',
                           description: 'REST API endpoints and usage examples',
-                          link: 'https://github.com/NacerEddine-19/PhishGuard-ML/API_DOCUMENTATION.md',
+                          link: 'https://github.com/NacerEddine-19/PhishGuard-ML/blob/main/API_DOCUMENTATION.md',
                           icon: FileText,
                           color: 'orange'
                         }

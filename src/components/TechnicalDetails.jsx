@@ -289,7 +289,7 @@ export default function TechnicalDetails() {
                         {
                           title: 'GitHub Repository',
                           description: 'Full source code with documentation and examples',
-                          link: 'https://github.com/NacerEddine-19/PhishGuard-ML-Website',
+                          link: 'https://github.com/NacerEddine-19/PhishGuard-ML',
                           icon: Code,
                           color: 'green'
                         },
@@ -303,7 +303,7 @@ export default function TechnicalDetails() {
                         {
                           title: 'API Documentation',
                           description: 'REST API endpoints and usage examples',
-                          link: 'https://github.com/NacerEddine-19/PhishGuard-ML-Website/API_DOCUMENTATION.md',
+                          link: 'https://github.com/NacerEddine-19/PhishGuard-ML/API_DOCUMENTATION.md',
                           icon: FileText,
                           color: 'orange'
                         }

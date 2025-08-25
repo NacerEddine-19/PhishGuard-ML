@@ -14,6 +14,6 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: process.env.PORT || 4173,
-    allowedHosts: ['healthcheck.railway.app','phishguard-ml-production.up.railway.app']
+    allowedHosts: ['healthcheck.railway.app','phishguard-ml-production.up.railway.app','phi-sh-guard.app']
   }
 })

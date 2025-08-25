@@ -296,7 +296,7 @@ export default function TechnicalDetails() {
                         {
                           title: 'Dataset Download',
                           description: 'Preprocessed dataset ready for experimentation',
-                          link: 'https://raw.githubusercontent.com/NacerEddine-19/PhishGuard-ML/main/src/data/phishing_site_urls.csv',
+                          link: 'https://www.kaggle.com/datasets/taruntiwarihp/phishing-site-urls/data',
                           icon: Database,
                           color: 'purple'
                         },

@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="space-y-2">
               <a href="https://github.com/NacerEddine-19/PhishGuard-ML" className="block text-gray-400 hover:text-white transition-colors text-sm">GitHub Repository</a>
               <a href="https://github.com/NacerEddine-19/PhishGuard-ML/blob/main/API_DOCUMENTATION.md" className="block text-gray-400 hover:text-white transition-colors text-sm">Research Paper</a>
-              <a href="https://raw.githubusercontent.com/NacerEddine-19/PhishGuard-ML/main/src/data/phishing_site_urls.csv" className="block text-gray-400 hover:text-white transition-colors text-sm">Dataset</a>
+              <a href="https://www.kaggle.com/datasets/taruntiwarihp/phishing-site-urls/data" className="block text-gray-400 hover:text-white transition-colors text-sm">Dataset</a>
             </div>
           </div>
           

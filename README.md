@@ -1,6 +1,6 @@
 # PhishGuard ML - Machine Learning Phishing Detection System
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel)](https://phishguard-ml.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel)](https://phi-sh-guard.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/NacerEddine-19/PhishGuard-ML)
 [![API Docs](https://img.shields.io/badge/API-Documentation-green?style=for-the-badge&logo=read-the-docs)](https://github.com/NacerEddine-19/PhishGuard-ML/blob/main/API_DOCUMENTATION.md)
 
@@ -23,7 +23,7 @@ PhishGuard-ML addresses the critical cybersecurity challenge of phishing attacks
 ## 🚀 Quick Start
 
 ### Live Demo
-Visit our interactive demo: **[PhishGuard-ML Live Demo](https://phishguard-ml.vercel.app)**
+Visit our interactive demo: **[PhishGuard-ML Live Demo](https://phi-sh-guard.app/)**
 
 ### Local Development
 
@@ -264,7 +264,7 @@ This project serves as both a production system and educational resource for:
 - 📧 **Email**: [majidnacereddine@gmail.com](mailto:majidnacereddine@gmail.com)
 - 💼 **LinkedIn**: [nacer-eddine-majid](https://www.linkedin.com/in/nacer-eddine-majid)
 -  **GitHub**: [NacerEddine-19](https://github.com/NacerEddine-19)
--  **Portfolio**: [PhishGuard-ML Live Demo](https://phishguard-ml.vercel.app)
+-  **Portfolio**: [PhishGuard-ML Live Demo](https://phi-sh-guard.app/)
 
 ---
 

@@ -354,7 +354,15 @@ def extract_features(url):
         ),
         "hostname_length": len(hostname),
         "is_top_domain": int(any(top in hostname for top in TOP_DOMAINS)),
-        "suspicious_tld": int(tld.lower() in SUSPICIOUS_TLDS)
+        "suspicious_tld": int(tld.lower() in SUSPICIOUS_TLDS),
+        "url_entropy": shannon_entropy(url),
+        "hyphen_count": url.count("-"),
+        "longest_digit_seq": longest_digit_run(url),
+        "levenshtein_sim_top": max(
+            [fuzz.ratio(domain, td) / 100.0 for td in TOP_DOMAINS]
+        )
+        if TOP_DOMAINS
+        else 0.0,
     }
     return features
 

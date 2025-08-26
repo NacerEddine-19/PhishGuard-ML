@@ -8,6 +8,29 @@ export default function DemoSection() {
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [analysisResult, setAnalysisResult] = useState(null)
   const [error, setError] = useState(null)
+  const suspiciousTLDs = [
+    ".tk",
+    ".ml",
+    ".ga",
+    ".cf",
+    ".gq",
+    ".xyz",
+    ".club",
+    ".top",
+    ".work",
+  ]
+  const topDomains = [
+    "google.com",
+    "facebook.com",
+    "amazon.com",
+    "wikipedia.org",
+    "twitter.com",
+    "github.com",
+    "linkedin.com",
+    "youtube.com",
+    "apple.com",
+    "microsoft.com",
+  ]
 
   const generate_analysis_details = (features) => {
     const details = []
@@ -109,31 +132,10 @@ export default function DemoSection() {
       )
         ? 1
         : 0
-      const suspiciousTLDs = [
-        ".tk",
-        ".ml",
-        ".ga",
-        ".cf",
-        ".gq",
-        ".xyz",
-        ".club",
-        ".top",
-        ".work",
-      ]
+      
       const tld = "." + urlObj.hostname.split(".").pop()
       const hasSuspiciousTLD = suspiciousTLDs.includes(tld) ? 1 : 0
-      const topDomains = [
-        "google.com",
-        "facebook.com",
-        "amazon.com",
-        "wikipedia.org",
-        "twitter.com",
-        "github.com",
-        "linkedin.com",
-        "youtube.com",
-        "apple.com",
-        "microsoft.com",
-      ]
+      
       const isTopDomain = topDomains.some((domain) =>
         urlObj.hostname.includes(domain)
       )

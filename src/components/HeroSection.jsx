@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button.jsx'
 import { ChevronRight } from 'lucide-react'
 import heroImage from '../assets/hero-image.png'
 
-export default function HeroSection({ scrollToDemo,scrollToOverView }) {
+export default function HeroSection({ scrollToDemo, scrollToOverView }) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -14,19 +14,14 @@ export default function HeroSection({ scrollToDemo,scrollToOverView }) {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Detecting Phishing Websites with
+                Phishing Detection with
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">
                   {" "}
                   Machine Learning
                 </span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-                Protecting users from malicious websites through advanced
-                machine learning algorithms. Our intelligent system analyzes URL
-                patterns, domain characteristics, and web content to identify
-                potential phishing threats with 95% accuracy, helping safeguard
-                digital identities and financial information from
-                cybercriminals.
+                This project demonstrates how machine learning can identify phishing websites by analyzing URL patterns and domain characteristics. Built with XGBoost and feature engineering, it achieves good accuracy in detecting malicious sites.
               </p>
             </div>
 
@@ -40,9 +35,8 @@ export default function HeroSection({ scrollToDemo,scrollToOverView }) {
               >
                 Try the Demo
                 <ChevronRight
-                  className={`ml-2 h-5 w-5 transition-transform duration-300 ${
-                    isHovered ? "translate-x-1" : ""
-                  }`}
+                  className={`ml-2 h-5 w-5 transition-transform duration-300 ${isHovered ? "translate-x-1" : ""
+                    }`}
                 />
               </Button>
               <Button
@@ -59,15 +53,15 @@ export default function HeroSection({ scrollToDemo,scrollToOverView }) {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">95%</div>
+                <div className="text-3xl font-bold text-blue-400">~90%</div>
                 <div className="text-gray-400">Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400">540K+</div>
+                <div className="text-3xl font-bold text-green-400">500K+</div>
                 <div className="text-gray-400">URLs Analyzed</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400">0.2s</div>
+              <div>
+                <div className="text-3xl font-bold text-purple-400">~0.5s</div>
                 <div className="text-gray-400">Response Time</div>
               </div>
             </div>
@@ -78,7 +72,7 @@ export default function HeroSection({ scrollToDemo,scrollToOverView }) {
             <div className="relative z-10 animate-float">
               <img
                 src={heroImage}
-                alt="Cybersecurity illustration with digital padlock and network connections"
+                alt="Machine learning pipeline illustration showing data flow and model training"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
             </div>
@@ -97,4 +91,4 @@ export default function HeroSection({ scrollToDemo,scrollToOverView }) {
       </div>
     </section>
   );
-} 
+}

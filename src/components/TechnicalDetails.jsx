@@ -118,14 +118,14 @@ export default function TechnicalDetails() {
                   {[
                     {
                       name: 'Random Forest',
-                      accuracy: '94.2%',
+                      accuracy: '86.2%',
                       description: 'Ensemble method with 100 decision trees, excellent for feature importance analysis',
                       pros: ['High interpretability', 'Robust to overfitting', 'Feature importance ranking'],
                       color: 'green'
                     },
                     {
                       name: 'XGBoost',
-                      accuracy: '95.2%',
+                      accuracy: '90.2%',
                       description: 'Gradient boosting framework optimized for speed and performance',
                       pros: ['Best overall accuracy', 'Fast inference', 'Handles missing values'],
                       color: 'blue'
@@ -203,10 +203,10 @@ export default function TechnicalDetails() {
                     <h4 className="text-xl font-semibold text-white">Performance Metrics</h4>
                     <div className="space-y-4">
                       {[
-                        { metric: 'Accuracy', value: '95%', description: 'Overall correct predictions' },
-                        { metric: 'Precision', value: '92%', description: 'True positives / (True positives + False positives)' },
-                        { metric: 'Recall', value: '96%', description: 'True positives / (True positives + False negatives)' },
-                        { metric: 'F1-Score', value: '94%', description: 'Harmonic mean of precision and recall' }
+                        { metric: 'Accuracy', value: '90.2%', description: 'Overall correct predictions' },
+                        { metric: 'Precision', value: '94.8%', description: 'True positives / (True positives + False positives)' },
+                        { metric: 'Recall', value: '96.1%', description: 'True positives / (True positives + False negatives)' },
+                        { metric: 'F1-Score', value: '95.4%', description: 'Harmonic mean of precision and recall' }
                       ].map((item, index) => (
                         <div key={index} className="bg-slate-700/30 rounded-lg p-4">
                           <div className="flex justify-between items-center mb-2">

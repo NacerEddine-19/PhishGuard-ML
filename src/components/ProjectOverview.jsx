@@ -45,7 +45,7 @@ export default function ProjectOverview() {
                 Our machine learning approach analyzes multiple URL and website characteristics in real-time, 
                 providing proactive protection against both known and zero-day phishing threats. By leveraging 
                 supervised learning algorithms, we can identify suspicious patterns and behaviors that indicate 
-                malicious intent, achieving <span className="text-green-400 font-semibold">95% accuracy </span> 
+                malicious intent, achieving <span className="text-green-400 font-semibold">90% accuracy </span> 
                 with minimal false positives.
               </p>
             </div>
@@ -77,19 +77,19 @@ export default function ProjectOverview() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
                 <div className="text-blue-400 font-semibold">Languages</div>
-                <div className="text-gray-300 text-sm">Python, JavaScript</div>
+                <div className="text-gray-300 text-sm">Python, JavaScript, FastAPI</div>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
                 <div className="text-green-400 font-semibold">ML Libraries</div>
-                <div className="text-gray-300 text-sm">Scikit-learn, XGBoost</div>
+                <div className="text-gray-300 text-sm">Scikit-learn, XGBoost, matplotlib</div>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
                 <div className="text-purple-400 font-semibold">Data Processing</div>
-                <div className="text-gray-300 text-sm">Pandas, NumPy</div>
+                <div className="text-gray-300 text-sm">Pandas, NumPy, Scikit-learn</div>
               </div>
               <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
                 <div className="text-orange-400 font-semibold">Deployment</div>
-                <div className="text-gray-300 text-sm">Flask, React</div>
+                <div className="text-gray-300 text-sm">Flask, React, Railway</div>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function ProjectOverview() {
               <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-gray-300">Accuracy</span>
-                  <span className="text-green-400 font-bold">95.2%</span>
+                  <span className="text-green-400 font-bold">90.2%</span>
                 </div>
                 <div className="w-full bg-slate-700 rounded-full h-2">
                   <div className="bg-gradient-to-r from-green-500 to-green-400 h-2 rounded-full" style={{width: '95.2%'}}></div>

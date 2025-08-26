@@ -7,7 +7,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-blue-400" />
+              <img 
+              src="/shield-logo.png" 
+              alt="PhishGuard ML Logo" 
+              className="h-8 w-8 object-contain"
+            />
               <span className="text-xl font-bold text-white">PhishGuard ML</span>
             </div>
             <p className="text-gray-400 text-sm">

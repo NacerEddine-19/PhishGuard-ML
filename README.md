@@ -264,7 +264,7 @@ This project serves as both a production system and educational resource for:
 - 📧 **Email**: [majidnacereddine@gmail.com](mailto:majidnacereddine@gmail.com)
 - 💼 **LinkedIn**: [nacer-eddine-majid](https://www.linkedin.com/in/nacer-eddine-majid)
 -  **GitHub**: [NacerEddine-19](https://github.com/NacerEddine-19)
--  **Portfolio**: [PhishGuard-ML Live Demo](https://phi-sh-guard.app/)
+<!-- -  **Portfolio**: [PhishGuard-ML Live Demo](https://phi-sh-guard.app/) -->
 
 ---
 

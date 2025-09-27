@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),tailwindcss()],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -14,6 +14,8 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: process.env.PORT || 4173,
-    allowedHosts: ['healthcheck.railway.app','phishguard-ml-production.up.railway.app','phi-sh-guard.app']
+    allowedHosts: [
+      'phishguard-ml-v2asy.ondigitalocean.app.',
+      'phi-sh-guard.app']
   }
 })

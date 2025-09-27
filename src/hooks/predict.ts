@@ -9,7 +9,7 @@ export async function predictURL(url: string){
     console.log("Predicting URL:", url);
     const trimmed = url.trim();
     const normalized = /^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//.test(trimmed) ? trimmed : `https://${trimmed}`;
-    const response = await fetch("https://phishguard-ml-v2asy.ondigitalocean.app/predict", {
+    const response = await fetch("https://phishguard-ml-v2asy.ondigitalocean.app/api/predict", {
     method: "POST",
     headers: {
         "Content-Type": "application/json",

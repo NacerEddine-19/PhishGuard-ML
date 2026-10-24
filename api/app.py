@@ -39,8 +39,8 @@ app.add_middleware(
 BASE_DIR = Path(__file__).resolve().parent
 # MODELS_DIR = BASE_DIR / "models"
 # print(BASE_DIR)
-PRIMARY_MODEL_PATH ="models/model_XGBClassifier.pkl"
-PRIMARY_ENCODER_PATH ="models/label_encoder_XGBClassifier.pkl"
+PRIMARY_MODEL_PATH = BASE_DIR / "models" / "model_XGBClassifier.pkl"
+PRIMARY_ENCODER_PATH = BASE_DIR / "models" / "label_encoder_XGBClassifier.pkl"
 print(PRIMARY_MODEL_PATH)
 print(PRIMARY_ENCODER_PATH)
 
